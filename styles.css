@@ -1,102 +1,209 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
+    background-color: #1e1e1e;
     color: #fdb515;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
+
 header {
-    background-color: #fdb515;
-    color: #000000;
+    background-color: #fdb515; 
+    padding: 20px 0;
+    color: #000;
     text-align: center;
-    padding: 20px;
-    position: relative;
+    border-bottom: 2px solid #000;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    position: relative; 
 }
 
 .logo {
+    width: 60px;
+    height: auto;
     position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 50px;
+    left: 20px; /
+    top: 50%;
 }
 
-.menu-icon-label {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    display: block;
-    width: 30px;
-    height: 30px;
+.header-title {
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .menu-dropdown {
-    display: none;
     position: absolute;
-    right: 10px;
-    top: 40px;
-    background-color: #000000;
-    border: 1px solid #fdb515;
+    right: 20px;
+    top: 50%;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.menu-list li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.search-form {
+    margin-top: 15px; 
+}
+
+.search-form input {
     padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #000;
+    border-right: none;
+    width: 300px; 
 }
 
-.menu-toggle:checked + .menu-dropdown {
-    display: block;
-}
-
-form input[type="search"], form button {
+.search-form button {
     padding: 10px;
-    margin-top: 10px;
-}
-
-form button {
-    background-color: #000000;
-    color: #ffffff;
-    border: none;
+    background-color: #000;
+    color: #fdb515;
+    border: 1px solid #000;
     cursor: pointer;
 }
 
-.content, .restaurant-ratings {
-    padding: 20px;
+
+
+.content {
     display: flex;
     justify-content: space-between;
+    padding: 20px;
 }
 
-.recent-reviews, .sidebar {
+.review-container {
+    flex: 2;
+}
+
+.recent-reviews {
+    margin-bottom: 20px;
+}
+
+.add-review {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar {
     flex: 1;
+    margin-left: 20px;
 }
 
-.restaurant-ratings ul {
-    list-style: none;
-    padding: 0;
+h2 {
+    color: #fdb515;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #fdb515;
+    padding-bottom: 5px;
 }
 
-.rating-details, .more-info {
-    margin-top: 5px;
-}
-
-.restaurant-name, .more-info {
-    display: block;
-    background-color: #fdb515;
+blockquote {
+    font-style: italic;
+    background-color: #1e1e1e;
     padding: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
+    border-left: 5px solid #fdb515;
+    margin-top: 10px;
 }
 
-footer {
-    text-align: center;
-    background-color: #fdb515;
-    color: #000000;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+.reaction-buttons {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.reaction {
+    background-color: #333;
+    color: #fdb515;
+    border: 2px solid #fdb515;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+
+.scrollable-table {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+table {
     width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    color: #fdb515;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #fdb515;
+}
+
+th {
+    background-color: #000;
+    font-weight: bold;
 }
 
 .campus-map {
-    width: 50%;
-    display: block;
-    height: auto;
+    width: 100%;
+    border-radius: 10px;
     margin-top: 20px;
+}
+
+.add-review form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-review label {
+    margin: 10px 0 5px;
+    color: #fdb515;
+}
+
+.add-review select,
+.add-review textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #fdb515;
+    background-color: #1e1e1e;
+    color: #fdb515;
+    border-radius: 5px;
+}
+
+.add-review button {
+    padding: 10px;
+    background-color: #000;
+    color: #fdb515;
+    border: 2px solid #fdb515;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #fdb515;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
