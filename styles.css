@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fdb515;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fdb515;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+}
+
+.menu-icon-label {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.menu-dropdown {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background-color: #000000;
+    border: 1px solid #fdb515;
+    padding: 10px;
+}
+
+.menu-toggle:checked + .menu-dropdown {
+    display: block;
+}
+
+form input[type="search"], form button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+form button {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.content, .restaurant-ratings {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-reviews, .sidebar {
+    flex: 1;
+}
+
+.restaurant-ratings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.rating-details, .more-info {
+    margin-top: 5px;
+}
+
+.restaurant-name, .more-info {
+    display: block;
+    background-color: #fdb515;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #fdb515;
+    color: #000000;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.campus-map {
+    width: 50%;
+    display: block;
+    height: auto;
+    margin-top: 20px;
+}
