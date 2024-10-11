@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header section which has the logo, title and navigation options -->
     <header>
         <div class="header-container">
             <img src="https://styleguide.umbc.edu/wp-content/uploads/sites/113/2019/03/UMBC-retriever-social-media.png" alt="UMBC Logo" class="logo">
             <h1 class="header-title">UMBC Campus Food Review</h1>
+            <! --  Navigation menu with links so options are clickable to desired route    -->
             <nav class="menu-dropdown">
                 <ul class="menu-list">
                     <li><a href="#">Profile</a></li>
@@ -19,20 +21,30 @@
                 </ul>
             </nav>
         </div>
+
+        <!--   Search form to find restaurants  -->
         <form class="search-form">
             <input type="search" placeholder="Search Restaurant">
             <button type="submit">Search</button>
         </form>
     </header>
 
+    <!--  Main content section   -->
     <main class="content">
         <div class="review-container">
             <section class="recent-reviews">
                 <h2>Recent Reviews</h2>
+
+                <!--  This is an example of a recent review   -->
                 <div class="review">
                     <p>Shannon P. wrote a review 12 minutes ago</p>
                     <blockquote>"Best shrimp cookies I’ve ever had. Would give 6 stars if I could."</blockquote>
-                    <!-- Reaction Buttons -->
+                    <p> ★★★★★</p>
+
+                    <!--  Link to see all reviews   -->
+                    <a href="customer-reviews.html" class="view-reviews">View All Customer Reviews</a>
+                    
+                    <!-- Reaction buttons to interact with the reviews    -->
                     <div class="reaction-buttons">
                         <button class="reaction">👍 Like</button>
                         <button class="reaction">👎 Dislike</button>
@@ -42,9 +54,12 @@
                 </div>
             </section>
 
+            <!--  Section to add a review   -->
             <section class="add-review">
                 <h2>Write a Review</h2>
                 <form id="review-form">
+
+                    <!--  Form to select the resstaurant, the options allow you to choose a restaurant   -->
                     <label for="restaurant-select">Choose a Restaurant:</label>
                     <select id="restaurant-select">
                         <option value="True Grits">True Grits</option>
@@ -56,19 +71,38 @@
                         <option value="Sushi Do">Sushi Do</option>
                         <option value="Einstein Bagel">Einstein Bagel</option>
                     </select>
+                </form>
+                
+                <!-- Form to select number of stars    -->
+                <form id = "review-stars">
+                    <label for = "restaurant-stars">How many stars?:</label>
+                    <select id = "restaurant-stars">
+                        <option value = "One Star">1</option>
+                        <option value = "Two Stars">2</option>
+                        <option value = "Three Stars">3</option>
+                        <option value = "Four Stars">4</option>
+                        <option value = "Five Stars">5</option>
+                </select>
+                </form>
 
-                    <label for="review-text">Your review:</label>
-                    <textarea id="review-text" rows="4" placeholder="Write your review here"></textarea>
+                <!--   Write the review here  -->
+                <label for="review-text">Your review:</label>
+                <textarea id="review-text" rows="4" placeholder="Write your review here"></textarea>
+
+
+                
 
                     <button type="submit">Submit Review</button>
                 </form>
             </section>
         </div>
 
+        <!-- Sidebar option with average restaurant rating with dummy data and a campus map that will be clickable      -->
         <aside class="sidebar">
             <section class="ratings">
-                <h2>Top Rated Restaurants</h2>
+                <h2>UMBC Restaurants</h2>
                 <div class="scrollable-table">
+                    <!--  Tables with each restaurant & rating    -->
                     <table>
                         <thead>
                             <tr>
@@ -113,10 +147,13 @@
                     </table>
                 </div>
             </section>
+            <!--  Campus map image   -->
             <img src="https://mcac.umbc.edu/wp-content/uploads/sites/160/2015/12/UMBC-General-Campus-Map_website-2.jpg" alt="Campus Map" class="campus-map">
         </aside>
     </main>
 
+
+    <!-- the footer with copyright     -->
     <footer>
         <p>© UMBC Dining Services</p>
     </footer>
