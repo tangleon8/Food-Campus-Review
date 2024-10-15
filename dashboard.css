@@ -1,0 +1,71 @@
+
+.total {
+    width: 80%;
+    margin: auto;
+    max-width: 1280px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.health {
+	  background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+	padding-right: 50px;
+}
+
+.food-image {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.transactions {
+    margin-top: 20px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #fdb515;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+   background-color: #fdb515;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #eaeaea;
+    margin: 5px 0;
+    padding: 10px;
+    
+}
+
+footer {
+    text-align: center;
+    background-color: #fdb515;
+    color: #000000;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
