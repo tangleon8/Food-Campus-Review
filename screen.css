@@ -1,0 +1,56 @@
+body {
+	 font-family: Arial,;
+     background-color:#000000;/* black */;
+     color: #fdb515;/* gold */;
+     margin: 0;
+     padding: 0;
+	 width:400px;
+	 height:500px;
+}
+
+.searchbar {
+	width:200px;
+	padding:10px;
+	border: 10px solid;
+	font-size: 10px;
+}
+
+.seaarch-button {
+	padding:10px;
+	margin-left:10px;
+	border:none;
+	cursor:pointer;
+	background-color:#fdb515;
+	font:bold;
+	font-size: 15px;
+}
+
+.filterbar {
+	margin-top:20px;
+}
+
+.rating-filter {
+	padding: 10px;
+	font-size:14px;
+	margin-right: 10px;
+}
+
+.price-filter {
+	padding: 10px;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.restaurant-list {
+	padding:0;
+	list-style-type:none;
+	margin:10px;
+}
+
+/*.restaurant-list li {
+	margin:10px;
+}*/
+	
+
+
+	
