@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Dining Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+ 
+<body>
+    <div class="total">
+        <header>
+		
+       <!--menu with profile, settings, and options -->
+        
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Options</a></li>
+            </ul>
+    
+	<!--welcome statement with user's name in account dashboard -->
+	
+        <h1>Welcome to Your Dining Account, <span id="username">_______</span>!</h1>
+        <form>
+		<!--search bar for profile items -->
+            <input type="search" placeholder="Search">
+            <button type="submit"> Search</button>
+        </form>
+           
+            <img src="https://assets.epicurious.com/photos/5c745a108918ee7ab68daf79/1:1/w_2560%2Cc_limit/Smashburger-recipe-120219.jpg" alt="Burger" class="food-image" width = "100" height = "100">
+        </header>
+        
+		<!--shows a few of student's most recent transactions -->
+        <section class="transactions">
+            <h2>Recent Transactions</h2>
+            <ul>
+			<li>Oct 12 (2:15 PM) - Snack at Retriever Market - $2.00</li>
+			<li>Oct 10 (5:21 PM) - Dinner at True Grits - $20.00</li>
+			<li>Oct 8 (9:32 AM) - Breakfast at Einstein - $6.00</li>
+                <li>Oct 7 (11:38 AM) - Lunch at Halal Shack - $12.50</li>
+				
+            </ul>
+        </section>
+		
+		<!--form to submit, messages to health advisor -->
+		
+		<section class="health">
+		<h3>myHealth Advisor</h3>
+		<form method ="POST" action ="health.php">
+            <input type="text" name = "health_message" placeholder="Send a message...">
+            <button type="submit"> submit</button>
+        </form>
+		</section>
+	
+    </div>
+	<footer>
+        <p>© UMBC Dining Services</p>
+    </footer>
+	
+</body>
+</html>
