@@ -6,7 +6,7 @@ $password = ("your_password");
 $dbname = ("your_database");
 
 // Create connection
-$conn = mysqli_connect("studentdb-maria.gl.umbc.edu","ws27852","ws27852","ws27852","ws27852");
+$conn = mysqli_connect("studentdb-maria.gl.umbc.edu","ws27852","ws27852","ws27852",);
 
 // Check connection
 if (mysqli_connect_errno()) {
