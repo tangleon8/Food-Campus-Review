@@ -9,8 +9,8 @@ $dbname = ("your_database");
 $conn = mysqli_connect("studentdb-maria.gl.umbc.edu","ws27852","ws27852","ws27852","ws27852");
 
 // Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+if (mysqli_connect_errno()) {
+    exit("Error: couldn't connect to database");
 }
 // Process form data
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -30,10 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif (empty($reviews)) {
         $errors[] = "Reviews cannot be empty.";
     } else {
-        // No validation errors, proceed to insert into database
-        $statement = $conn->prepare("INSERT INTO Users (Password, Name, Reviews) VALUES (?, ?, ?)");
-        $password = password_hash($password, PASSWORD_DEFAULT);
-        $statement->bind_param("sss", $password, $name, $reviews);
 
         if ($statement->execute()) {
             $_SESSION['username'] = $name; // Store username in session
