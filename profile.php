@@ -1,28 +1,35 @@
 <?php
+// Start the session at the very beginning
 session_start();
 
+// Define the error message variable
 $error = '';
 
+// Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+    // Get the health message from HTML form
     $message = isset($_POST['health_message']) ? $_POST['health_message'] : '';
 
+    // Establish database connection
     $db = mysqli_connect("studentdb-maria.gl.umbc.edu", "leont1", "leont1", "leont1");
     if (!$db) {
         $error = "Connection failed: " . mysqli_connect_error();
     } else {
+        // Ensures message is not empty and not too long
         if (empty($message)) {
             $error = "Please enter a message.";
         } elseif (strlen($message) > 200) {
             $error = "Your message was too long, only 200 characters allowed.";
         } else {
+            // Prepare and bind
             $stmt = mysqli_prepare($db, "INSERT INTO health_messages (message_content, message_time) VALUES (?, NOW())");
             mysqli_stmt_bind_param($stmt, 's', $message);
             if (mysqli_stmt_execute($stmt)) {
                 $error = "Message sent successfully";
+                // Clears the input form for next message
                 $_POST['health_message'] = '';
             } else {
-                $error = "Does not work: " . mysqli_error($db);
+                $error = "Database error: " . mysqli_error($db);
             }
             mysqli_stmt_close($stmt);
         }
@@ -38,23 +45,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College Dining Dashboard</title>
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<?php 
+    $pageTitle = 'College Dining Dashboard';
+    $headerTitle = 'Welcome to Your Dining Account!';
+    include 'header.php'; 
+    ?>
+
     <div class="total">
-        <header>
-            <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Options</a></li>
-            </ul>
-            <h1>Welcome to Your Dining Account, <span id="username"><?php echo htmlspecialchars(isset($_SESSION['username']) ? $_SESSION['username'] : ''); ?></span>!</h1>
-            <form>
-                <input type="search" placeholder="Search">
-                <button type="submit">Search</button>
-            </form>
-            <img src="burger.jpg" alt="Burger" class="food-image" width="100" height="100">
-        </header>
         <section class="health">
             <h3>myHealth Advisor</h3>
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
